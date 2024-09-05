@@ -11,6 +11,12 @@
 		E454D5102C88BBC200CA8988 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E454D50F2C88BBC200CA8988 /* ContentView.swift */; };
 		E454D5122C88BBC400CA8988 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E454D5112C88BBC400CA8988 /* Assets.xcassets */; };
 		E454D5152C88BBC400CA8988 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E454D5142C88BBC400CA8988 /* Preview Assets.xcassets */; };
+		E454D51E2C88C18B00CA8988 /* DrawsResponseDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = E454D51D2C88C18B00CA8988 /* DrawsResponseDTO.swift */; };
+		E454D5202C88C30E00CA8988 /* DrawDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = E454D51F2C88C30E00CA8988 /* DrawDTO.swift */; };
+		E454D5242C88C75D00CA8988 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E454D5232C88C75D00CA8988 /* NetworkManager.swift */; };
+		E454D5272C88D43700CA8988 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E454D5262C88D43700CA8988 /* Constants.swift */; };
+		E454D52A2C88D7BD00CA8988 /* MockDrawsResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = E454D5292C88D7BD00CA8988 /* MockDrawsResponse.json */; };
+		E454D52C2C88E86F00CA8988 /* FTWError.swift in Sources */ = {isa = PBXBuildFile; fileRef = E454D52B2C88E86F00CA8988 /* FTWError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +25,12 @@
 		E454D50F2C88BBC200CA8988 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		E454D5112C88BBC400CA8988 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E454D5142C88BBC400CA8988 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		E454D51D2C88C18B00CA8988 /* DrawsResponseDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawsResponseDTO.swift; sourceTree = "<group>"; };
+		E454D51F2C88C30E00CA8988 /* DrawDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawDTO.swift; sourceTree = "<group>"; };
+		E454D5232C88C75D00CA8988 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		E454D5262C88D43700CA8988 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		E454D5292C88D7BD00CA8988 /* MockDrawsResponse.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = MockDrawsResponse.json; sourceTree = "<group>"; };
+		E454D52B2C88E86F00CA8988 /* FTWError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FTWError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +65,10 @@
 			children = (
 				E454D50D2C88BBC200CA8988 /* ForTheWinApp.swift */,
 				E454D50F2C88BBC200CA8988 /* ContentView.swift */,
+				E454D5252C88D42B00CA8988 /* Utilities */,
+				E454D5222C88C74D00CA8988 /* Services */,
+				E454D51B2C88C10000CA8988 /* Model */,
+				E454D5282C88D76500CA8988 /* MockData */,
 				E454D5112C88BBC400CA8988 /* Assets.xcassets */,
 				E454D5132C88BBC400CA8988 /* Preview Content */,
 			);
@@ -65,6 +81,48 @@
 				E454D5142C88BBC400CA8988 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		E454D51B2C88C10000CA8988 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E454D51C2C88C15200CA8988 /* Data Transfer Objects */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E454D51C2C88C15200CA8988 /* Data Transfer Objects */ = {
+			isa = PBXGroup;
+			children = (
+				E454D51D2C88C18B00CA8988 /* DrawsResponseDTO.swift */,
+				E454D51F2C88C30E00CA8988 /* DrawDTO.swift */,
+			);
+			path = "Data Transfer Objects";
+			sourceTree = "<group>";
+		};
+		E454D5222C88C74D00CA8988 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				E454D5232C88C75D00CA8988 /* NetworkManager.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		E454D5252C88D42B00CA8988 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				E454D5262C88D43700CA8988 /* Constants.swift */,
+				E454D52B2C88E86F00CA8988 /* FTWError.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		E454D5282C88D76500CA8988 /* MockData */ = {
+			isa = PBXGroup;
+			children = (
+				E454D5292C88D7BD00CA8988 /* MockDrawsResponse.json */,
+			);
+			path = MockData;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,6 +185,7 @@
 			files = (
 				E454D5152C88BBC400CA8988 /* Preview Assets.xcassets in Resources */,
 				E454D5122C88BBC400CA8988 /* Assets.xcassets in Resources */,
+				E454D52A2C88D7BD00CA8988 /* MockDrawsResponse.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,8 +196,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E454D51E2C88C18B00CA8988 /* DrawsResponseDTO.swift in Sources */,
+				E454D52C2C88E86F00CA8988 /* FTWError.swift in Sources */,
+				E454D5202C88C30E00CA8988 /* DrawDTO.swift in Sources */,
+				E454D5242C88C75D00CA8988 /* NetworkManager.swift in Sources */,
 				E454D5102C88BBC200CA8988 /* ContentView.swift in Sources */,
 				E454D50E2C88BBC200CA8988 /* ForTheWinApp.swift in Sources */,
+				E454D5272C88D43700CA8988 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -197,7 +261,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -254,7 +318,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -279,6 +343,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -286,6 +351,10 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.test.ForTheWin;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -307,6 +376,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -314,6 +384,10 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.test.ForTheWin;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
