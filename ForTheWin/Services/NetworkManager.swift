@@ -14,14 +14,18 @@ class NetworkManager {
         case localFile
     }
     
-    private let remoteApiUrl = URLStrings.mockDataApi
+    private var jsonSource: JSONSource
     
-    func getDraws(from jsonSource: JSONSource) async throws -> [DrawDTO] {
-        
+    init(jsonSource: JSONSource) {
+        self.jsonSource = jsonSource
+    }
+    
+    func getDraws() async throws -> [DrawDTO] {
         var data = Data()
         // Get 'data' from respective source depending on 'jsonSource' parameter type chosen
         switch jsonSource {
         case .remoteApi:
+            let remoteApiUrl = URLStrings.mockDataApi
             guard let url = URL(string: remoteApiUrl) else { throw FTWError.invalidURL }
             let session = URLSession.shared
             (data, _) = try await session.data(from: url)

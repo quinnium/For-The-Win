@@ -7,8 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0267FE112C89CFFD00F6D41B /* Draw.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0267FE102C89CFFD00F6D41B /* Draw.swift */; };
+		0267FE192C89E42B00F6D41B /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 0267FE182C89E42B00F6D41B /* RealmSwift */; };
+		0267FE1B2C89EDC400F6D41B /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0267FE1A2C89EDC400F6D41B /* DatabaseManager.swift */; };
+		0267FE1D2C8A049200F6D41B /* ModelDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0267FE1C2C8A049200F6D41B /* ModelDataSource.swift */; };
+		0267FE202C8A075900F6D41B /* Collection+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0267FE1F2C8A075900F6D41B /* Collection+Ext.swift */; };
+		0267FE232C8B3A4C00F6D41B /* DrawsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0267FE222C8B3A4C00F6D41B /* DrawsView.swift */; };
+		0267FE252C8B3A5A00F6D41B /* DawsView+VM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0267FE242C8B3A5A00F6D41B /* DawsView+VM.swift */; };
 		E454D50E2C88BBC200CA8988 /* ForTheWinApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E454D50D2C88BBC200CA8988 /* ForTheWinApp.swift */; };
-		E454D5102C88BBC200CA8988 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E454D50F2C88BBC200CA8988 /* ContentView.swift */; };
 		E454D5122C88BBC400CA8988 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E454D5112C88BBC400CA8988 /* Assets.xcassets */; };
 		E454D5152C88BBC400CA8988 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E454D5142C88BBC400CA8988 /* Preview Assets.xcassets */; };
 		E454D51E2C88C18B00CA8988 /* DrawsResponseDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = E454D51D2C88C18B00CA8988 /* DrawsResponseDTO.swift */; };
@@ -20,9 +26,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0267FE102C89CFFD00F6D41B /* Draw.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Draw.swift; sourceTree = "<group>"; };
+		0267FE1A2C89EDC400F6D41B /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
+		0267FE1C2C8A049200F6D41B /* ModelDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelDataSource.swift; sourceTree = "<group>"; };
+		0267FE1F2C8A075900F6D41B /* Collection+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+Ext.swift"; sourceTree = "<group>"; };
+		0267FE222C8B3A4C00F6D41B /* DrawsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawsView.swift; sourceTree = "<group>"; };
+		0267FE242C8B3A5A00F6D41B /* DawsView+VM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DawsView+VM.swift"; sourceTree = "<group>"; };
 		E454D50A2C88BBC200CA8988 /* ForTheWin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ForTheWin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E454D50D2C88BBC200CA8988 /* ForTheWinApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForTheWinApp.swift; sourceTree = "<group>"; };
-		E454D50F2C88BBC200CA8988 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		E454D5112C88BBC400CA8988 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E454D5142C88BBC400CA8988 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E454D51D2C88C18B00CA8988 /* DrawsResponseDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawsResponseDTO.swift; sourceTree = "<group>"; };
@@ -38,12 +49,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0267FE192C89E42B00F6D41B /* RealmSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0267FE1E2C8A073500F6D41B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				0267FE1F2C8A075900F6D41B /* Collection+Ext.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		0267FE212C8B3A2A00F6D41B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0267FE222C8B3A4C00F6D41B /* DrawsView.swift */,
+				0267FE242C8B3A5A00F6D41B /* DawsView+VM.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		E454D5012C88BBC200CA8988 = {
 			isa = PBXGroup;
 			children = (
@@ -64,10 +93,11 @@
 			isa = PBXGroup;
 			children = (
 				E454D50D2C88BBC200CA8988 /* ForTheWinApp.swift */,
-				E454D50F2C88BBC200CA8988 /* ContentView.swift */,
+				0267FE1E2C8A073500F6D41B /* Extensions */,
 				E454D5252C88D42B00CA8988 /* Utilities */,
 				E454D5222C88C74D00CA8988 /* Services */,
 				E454D51B2C88C10000CA8988 /* Model */,
+				0267FE212C8B3A2A00F6D41B /* Views */,
 				E454D5282C88D76500CA8988 /* MockData */,
 				E454D5112C88BBC400CA8988 /* Assets.xcassets */,
 				E454D5132C88BBC400CA8988 /* Preview Content */,
@@ -87,6 +117,7 @@
 			isa = PBXGroup;
 			children = (
 				E454D51C2C88C15200CA8988 /* Data Transfer Objects */,
+				0267FE102C89CFFD00F6D41B /* Draw.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -104,6 +135,8 @@
 			isa = PBXGroup;
 			children = (
 				E454D5232C88C75D00CA8988 /* NetworkManager.swift */,
+				0267FE1A2C89EDC400F6D41B /* DatabaseManager.swift */,
+				0267FE1C2C8A049200F6D41B /* ModelDataSource.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -141,6 +174,9 @@
 			dependencies = (
 			);
 			name = ForTheWin;
+			packageProductDependencies = (
+				0267FE182C89E42B00F6D41B /* RealmSwift */,
+			);
 			productName = ForTheWin;
 			productReference = E454D50A2C88BBC200CA8988 /* ForTheWin.app */;
 			productType = "com.apple.product-type.application";
@@ -169,6 +205,9 @@
 				Base,
 			);
 			mainGroup = E454D5012C88BBC200CA8988;
+			packageReferences = (
+				0267FE152C89E42B00F6D41B /* XCRemoteSwiftPackageReference "realm-swift" */,
+			);
 			productRefGroup = E454D50B2C88BBC200CA8988 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -196,13 +235,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0267FE1D2C8A049200F6D41B /* ModelDataSource.swift in Sources */,
+				0267FE202C8A075900F6D41B /* Collection+Ext.swift in Sources */,
+				0267FE232C8B3A4C00F6D41B /* DrawsView.swift in Sources */,
 				E454D51E2C88C18B00CA8988 /* DrawsResponseDTO.swift in Sources */,
 				E454D52C2C88E86F00CA8988 /* FTWError.swift in Sources */,
 				E454D5202C88C30E00CA8988 /* DrawDTO.swift in Sources */,
+				0267FE112C89CFFD00F6D41B /* Draw.swift in Sources */,
 				E454D5242C88C75D00CA8988 /* NetworkManager.swift in Sources */,
-				E454D5102C88BBC200CA8988 /* ContentView.swift in Sources */,
 				E454D50E2C88BBC200CA8988 /* ForTheWinApp.swift in Sources */,
 				E454D5272C88D43700CA8988 /* Constants.swift in Sources */,
+				0267FE252C8B3A5A00F6D41B /* DawsView+VM.swift in Sources */,
+				0267FE1B2C89EDC400F6D41B /* DatabaseManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -416,6 +460,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		0267FE152C89E42B00F6D41B /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		0267FE182C89E42B00F6D41B /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0267FE152C89E42B00F6D41B /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = RealmSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = E454D5022C88BBC200CA8988 /* Project object */;
 }
