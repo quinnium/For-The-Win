@@ -10,10 +10,8 @@ import Foundation
 extension DrawsView {
     class ViewModel: ObservableObject {
         
-        @Published var draws: [Draw] = []
-        
-        var modelDataSource: ModelDataSource
-        
+        @Published var allDraws: [String: [Draw]] = [:]
+        private var modelDataSource: ModelDataSource
         
         init(modelDataSource: ModelDataSource) {
             self.modelDataSource = modelDataSource
@@ -21,14 +19,19 @@ extension DrawsView {
         
         func fetchDraws() async {
             do {
-                let fectehdDraws = try await modelDataSource.fetchDraws()
+                let fetchedDraws = try await modelDataSource.fetchDraws()
                 DispatchQueue.main.async {
-                    self.draws = fectehdDraws
+                    for draw in fetchedDraws {
+                        self.allDraws[draw.gameName, default: []].append(draw)
+                    }
+                    // Sort each dictionary value (array of draws) by draw date
+                    for (key, array) in self.allDraws {
+                        self.allDraws[key] = array.sorted { $0.drawDate < $1.drawDate }
+                    }
                 }
             } catch {
                 print("Failed to fetch draws")
             }
         }
-        
     }
 }

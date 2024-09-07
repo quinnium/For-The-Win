@@ -13,9 +13,28 @@ struct DrawsView: View {
     
     var body: some View {
         VStack {
-            Text("View loaded")
-            List(viewModel.draws, id: \.id) { draw in
-                Text(draw.numbers.description)
+            List {
+                ForEach(viewModel.allDraws.keys.sorted(), id: \.self) { gameName in
+                    Section(gameName) {
+                        ForEach(viewModel.allDraws[gameName] ?? [], id: \.id) { draw in
+                            VStack {
+                                HStack {
+                                    Text(draw.drawDate.formatted(date: .long, time: .omitted))
+                                    Spacer()
+                                    Text(draw.gameName)
+                                        .font(.caption)
+                                        .foregroundStyle(.gray)
+                                }
+                                HStack {
+                                    Text("Jackpot: £\(draw.topPrize)")
+                                        .font(.caption)
+                                        .foregroundStyle(.gray)
+                                    Spacer()
+                                }
+                            }
+                        }
+                    }
+                }
             }
         }
         .onAppear {
@@ -26,6 +45,11 @@ struct DrawsView: View {
     }
 }
 
-//#Preview {
-//    DrawsView()
-//}
+#Preview {
+    let networkManager = NetworkManager(jsonSource: .localFile)
+    let databaseManager = DatabaseManager()
+    let modelDataSource = ModelDataSource(networkManager: networkManager, databaseManager: databaseManager)
+    let viewModel = DrawsView.ViewModel(modelDataSource: modelDataSource)
+    
+    return DrawsView(viewModel: viewModel)
+}
