@@ -10,6 +10,7 @@ import SwiftUI
 struct DrawDetailContainerView: View {
     
     @StateObject var viewModel: ViewModel
+    @State var ticketVisible = false
     
     var body: some View {
         ZStack {
@@ -21,20 +22,18 @@ struct DrawDetailContainerView: View {
                     viewModel.dismissTapped()
                 }
             // Tabview showing Draws
-            TabView(selection: $viewModel.selectedDrawID) {
-                ForEach(viewModel.draws, id: \.id) { draw in
-                    DrawDetailView(draw: draw)
+            ZStack {
+                Color(uiColor: .systemBackground)
+                Color.green.opacity(0.5)
+                TabView(selection: $viewModel.selectedDraw) {
+                    ForEach(viewModel.draws, id: \.self) { draw in
+                        DrawDetailView(draw: draw)
+                    }
                 }
             }
             .tabViewStyle(.page(indexDisplayMode: .always))
             .indexViewStyle(.page(backgroundDisplayMode: .always))
             .frame(height: 300)
-            .background {
-                ZStack {
-                    Color(uiColor: .systemBackground)
-                    Color.green.opacity(0.5)
-                }
-            }
             .clipShape(RoundedRectangle(cornerRadius: 20))
             // Close button
             .overlay(alignment: .topTrailing) {
@@ -48,6 +47,16 @@ struct DrawDetailContainerView: View {
                     .offset(x: -10, y: 10)
             }
             .padding(.horizontal)
+
+        }
+        .overlay(alignment: .bottom) {
+            DrawTicketView(viewModel: .init(draw: viewModel.selectedDraw))
+                .offset(y: ticketVisible ? 0 : 400)
+                .animation(.easeInOut(duration: 0.5), value: ticketVisible)
+        }
+        .ignoresSafeArea()
+        .onAppear {
+            ticketVisible = true
         }
     }
 }
@@ -55,5 +64,5 @@ struct DrawDetailContainerView: View {
 #Preview {
     @State var draw: Draw = MockObjects.draw
 
-    return DrawDetailContainerView(viewModel: .init(draws: [draw], selectedDrawID: draw.id, dismissTapped: {}))
+    return DrawDetailContainerView(viewModel: .init(draws: [draw], selectedDraw: draw, dismissTapped: {}))
 }

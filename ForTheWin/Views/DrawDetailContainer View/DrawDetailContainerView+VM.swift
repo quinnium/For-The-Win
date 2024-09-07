@@ -11,12 +11,12 @@ extension DrawDetailContainerView {
     class ViewModel: ObservableObject {
         
         let draws: [Draw]
-        @Published var selectedDrawID: String
+        @Published var selectedDraw: Draw
         let dismissTapped: () -> Void
         
-        init(draws: [Draw], selectedDrawID: String, dismissTapped: @escaping () -> Void) {
+        init(draws: [Draw], selectedDraw: Draw, dismissTapped: @escaping () -> Void) {
             self.draws = draws
-            self.selectedDrawID = selectedDrawID
+            self.selectedDraw = selectedDraw
             self.dismissTapped = dismissTapped
         }
     }

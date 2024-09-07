@@ -31,18 +31,18 @@ struct DrawsView: View {
                 }
                 .onTapGesture {
                     withAnimation {
-                        viewModel.selectedDrawID = draw.id
+                        viewModel.selectedDraw = draw
                     }
                 }
             }
         }
-        .blur(radius: viewModel.selectedDrawID == nil ? 0 : 3)
+        .blur(radius: viewModel.selectedDraw == nil ? 0 : 3)
         
         .overlay {
-            if let selectedDrawID = viewModel.selectedDrawID {
-                DrawDetailContainerView(viewModel: .init(draws: viewModel.allDraws, 
-                                                         selectedDrawID: selectedDrawID,
-                                                         dismissTapped: { viewModel.selectedDrawID = nil }))
+            if viewModel.selectedDraw != nil {
+                DrawDetailContainerView(viewModel: .init(draws: viewModel.allDraws,
+                                                         selectedDraw: viewModel.selectedDraw!,
+                                                         dismissTapped: { viewModel.selectedDraw = nil }))
     
                 .transition(.opacity)
             }

@@ -13,7 +13,7 @@ extension DrawsView {
         private var modelDataSource: ModelDataSource
         
         @Published var allDraws: [Draw] = []
-        @Published var selectedDrawID: String? = nil
+        @Published var selectedDraw: Draw? = nil
         
         init(modelDataSource: ModelDataSource) {
             self.modelDataSource = modelDataSource

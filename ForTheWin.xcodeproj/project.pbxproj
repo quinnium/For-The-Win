@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		025BE62D2C8C930D00803578 /* DrawDetailContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025BE62C2C8C930D00803578 /* DrawDetailContainerView.swift */; };
 		025BE6312C8CB76300803578 /* DrawDetailContainerView+VM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025BE6302C8CB76300803578 /* DrawDetailContainerView+VM.swift */; };
+		025BE6332C8CC34B00803578 /* DrawTicket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025BE6322C8CC34B00803578 /* DrawTicket.swift */; };
+		025BE6352C8CC44100803578 /* DrawTicketView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025BE6342C8CC44100803578 /* DrawTicketView.swift */; };
+		025BE6382C8CCFDF00803578 /* DrawTicketView+VM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025BE6372C8CCFDF00803578 /* DrawTicketView+VM.swift */; };
 		0267FE112C89CFFD00F6D41B /* Draw.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0267FE102C89CFFD00F6D41B /* Draw.swift */; };
 		0267FE192C89E42B00F6D41B /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 0267FE182C89E42B00F6D41B /* RealmSwift */; };
 		0267FE1B2C89EDC400F6D41B /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0267FE1A2C89EDC400F6D41B /* DatabaseManager.swift */; };
@@ -33,6 +36,9 @@
 /* Begin PBXFileReference section */
 		025BE62C2C8C930D00803578 /* DrawDetailContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawDetailContainerView.swift; sourceTree = "<group>"; };
 		025BE6302C8CB76300803578 /* DrawDetailContainerView+VM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DrawDetailContainerView+VM.swift"; sourceTree = "<group>"; };
+		025BE6322C8CC34B00803578 /* DrawTicket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawTicket.swift; sourceTree = "<group>"; };
+		025BE6342C8CC44100803578 /* DrawTicketView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawTicketView.swift; sourceTree = "<group>"; };
+		025BE6372C8CCFDF00803578 /* DrawTicketView+VM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DrawTicketView+VM.swift"; sourceTree = "<group>"; };
 		0267FE102C89CFFD00F6D41B /* Draw.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Draw.swift; sourceTree = "<group>"; };
 		0267FE1A2C89EDC400F6D41B /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
 		0267FE1C2C8A049200F6D41B /* ModelDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelDataSource.swift; sourceTree = "<group>"; };
@@ -76,6 +82,15 @@
 			path = "DrawDetailContainer View";
 			sourceTree = "<group>";
 		};
+		025BE6362C8CCFCA00803578 /* DrawTicketView */ = {
+			isa = PBXGroup;
+			children = (
+				025BE6342C8CC44100803578 /* DrawTicketView.swift */,
+				025BE6372C8CCFDF00803578 /* DrawTicketView+VM.swift */,
+			);
+			path = DrawTicketView;
+			sourceTree = "<group>";
+		};
 		0267FE1E2C8A073500F6D41B /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -98,6 +113,7 @@
 			children = (
 				02CE57482C8C85A300F87EDF /* DrawDetailView.swift */,
 				02EEAC262C8C8356006CA058 /* DrawBallView.swift */,
+				025BE6362C8CCFCA00803578 /* DrawTicketView */,
 			);
 			path = Subviews;
 			sourceTree = "<group>";
@@ -156,6 +172,7 @@
 			children = (
 				E454D51C2C88C15200CA8988 /* Data Transfer Objects */,
 				0267FE102C89CFFD00F6D41B /* Draw.swift */,
+				025BE6322C8CC34B00803578 /* DrawTicket.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -276,11 +293,14 @@
 			files = (
 				025BE6312C8CB76300803578 /* DrawDetailContainerView+VM.swift in Sources */,
 				0267FE1D2C8A049200F6D41B /* ModelDataSource.swift in Sources */,
+				025BE6352C8CC44100803578 /* DrawTicketView.swift in Sources */,
 				02CE574D2C8C871800F87EDF /* MockObjects.swift in Sources */,
 				0267FE202C8A075900F6D41B /* Collection+Ext.swift in Sources */,
+				025BE6382C8CCFDF00803578 /* DrawTicketView+VM.swift in Sources */,
 				0267FE232C8B3A4C00F6D41B /* DrawsView.swift in Sources */,
 				E454D51E2C88C18B00CA8988 /* DrawsResponseDTO.swift in Sources */,
 				E454D52C2C88E86F00CA8988 /* FTWError.swift in Sources */,
+				025BE6332C8CC34B00803578 /* DrawTicket.swift in Sources */,
 				E454D5202C88C30E00CA8988 /* DrawDTO.swift in Sources */,
 				025BE62D2C8C930D00803578 /* DrawDetailContainerView.swift in Sources */,
 				0267FE112C89CFFD00F6D41B /* Draw.swift in Sources */,
