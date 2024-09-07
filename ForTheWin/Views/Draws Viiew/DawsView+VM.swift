@@ -10,8 +10,10 @@ import Foundation
 extension DrawsView {
     class ViewModel: ObservableObject {
         
-        @Published var allDraws: [String: [Draw]] = [:]
         private var modelDataSource: ModelDataSource
+        
+        @Published var allDraws: [Draw] = []
+        @Published var selectedDrawID: String? = nil
         
         init(modelDataSource: ModelDataSource) {
             self.modelDataSource = modelDataSource
@@ -21,12 +23,13 @@ extension DrawsView {
             do {
                 let fetchedDraws = try await modelDataSource.fetchDraws()
                 DispatchQueue.main.async {
-                    for draw in fetchedDraws {
-                        self.allDraws[draw.gameName, default: []].append(draw)
-                    }
-                    // Sort each dictionary value (array of draws) by draw date
-                    for (key, array) in self.allDraws {
-                        self.allDraws[key] = array.sorted { $0.drawDate < $1.drawDate }
+                    // Sort by gameName first, then by drawDate
+                    self.allDraws = fetchedDraws.sorted {
+                        if $0.gameName == $1.gameName {
+                            return $0.drawDate < $1.drawDate
+                        } else {
+                            return $0.gameName < $1.gameName
+                        }
                     }
                 }
             } catch {
