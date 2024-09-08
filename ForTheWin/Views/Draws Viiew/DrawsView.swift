@@ -26,7 +26,6 @@ struct DrawsView: View {
                                 viewModel.selectedDraw = draw
                             }
                         }
-
                 }
             }
         }

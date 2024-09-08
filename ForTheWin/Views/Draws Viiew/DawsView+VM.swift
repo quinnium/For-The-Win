@@ -10,11 +10,11 @@ import Foundation
 extension DrawsView {
     final class ViewModel: ObservableObject {
         
-        private var modelDataSource: ModelDataSource
+        private var modelDataSource: ModelDataSourceProtocol
         @Published var allDraws: [Draw] = []
         @Published var selectedDraw: Draw? = nil
         
-        init(modelDataSource: ModelDataSource) {
+        init(modelDataSource: ModelDataSourceProtocol) {
             self.modelDataSource = modelDataSource
         }
         
@@ -22,10 +22,10 @@ extension DrawsView {
             do {
                 let fetchedDraws = try await modelDataSource.fetchDraws()
                 DispatchQueue.main.async {
-                    // Sort by gameName first, then by drawDate
+                    // Sort by gameName first, then by drawDate (most recent first)
                     self.allDraws = fetchedDraws.sorted {
                         if $0.gameName == $1.gameName {
-                            return $0.drawDate < $1.drawDate
+                            return $0.drawDate > $1.drawDate
                         } else {
                             return $0.gameName < $1.gameName
                         }

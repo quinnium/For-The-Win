@@ -55,4 +55,20 @@ class Draw: Object {
             }
         }
     }
+    
+    // For when intiailising for Testing purposes
+    convenience init(gameID: Int, gameName: String, id: String, drawDate: Date, numbers: [Int], bonusBalls: [Int], topPrize: Int) {
+        self.init()
+        self.gameID = gameID
+        self.gameName = gameName
+        self.id = id
+        self.drawDate = drawDate
+        self.numbers = List<Int>()
+        self.numbers.append(objectsIn: numbers)
+        self.bonusBalls = List<Int>()
+        self.bonusBalls.append(objectsIn: bonusBalls)
+        self.topPrize = topPrize
+        
+    }
 }
+

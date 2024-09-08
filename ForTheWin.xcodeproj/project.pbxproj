@@ -23,6 +23,10 @@
 		02CE574D2C8C871800F87EDF /* MockObjects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02CE574C2C8C871800F87EDF /* MockObjects.swift */; };
 		02DF2AAA2C8DA81C0079E047 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 02DF2AA92C8DA81C0079E047 /* RealmSwift */; };
 		02DF2AAB2C8DA8990079E047 /* RealmSwift in Embed Frameworks */ = {isa = PBXBuildFile; productRef = 02DF2AA92C8DA81C0079E047 /* RealmSwift */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		02DF2AB32C8DB5680079E047 /* DrawsViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02DF2AB22C8DB5680079E047 /* DrawsViewModelTests.swift */; };
+		02DF2ABA2C8DBB820079E047 /* Date+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02DF2AB92C8DBB820079E047 /* Date+Ext.swift */; };
+		02DF2ABC2C8DCC780079E047 /* NetworkManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02DF2ABB2C8DCC780079E047 /* NetworkManagerTests.swift */; };
+		02DF2ABE2C8DCE2C0079E047 /* DrawTicketViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02DF2ABD2C8DCE2C0079E047 /* DrawTicketViewModelTests.swift */; };
 		02EEAC272C8C8356006CA058 /* DrawBallView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02EEAC262C8C8356006CA058 /* DrawBallView.swift */; };
 		E454D50E2C88BBC200CA8988 /* ForTheWinApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E454D50D2C88BBC200CA8988 /* ForTheWinApp.swift */; };
 		E454D5122C88BBC400CA8988 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E454D5112C88BBC400CA8988 /* Assets.xcassets */; };
@@ -34,6 +38,16 @@
 		E454D52A2C88D7BD00CA8988 /* MockDrawsResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = E454D5292C88D7BD00CA8988 /* MockDrawsResponse.json */; };
 		E454D52C2C88E86F00CA8988 /* FTWError.swift in Sources */ = {isa = PBXBuildFile; fileRef = E454D52B2C88E86F00CA8988 /* FTWError.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		02DF2AB42C8DB5680079E047 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E454D5022C88BBC200CA8988 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E454D5092C88BBC200CA8988;
+			remoteInfo = ForTheWin;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		0204F7782C8DA51C001F7C85 /* Embed Frameworks */ = {
@@ -64,6 +78,11 @@
 		0267FE242C8B3A5A00F6D41B /* DawsView+VM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DawsView+VM.swift"; sourceTree = "<group>"; };
 		02CE57482C8C85A300F87EDF /* DrawDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawDetailView.swift; sourceTree = "<group>"; };
 		02CE574C2C8C871800F87EDF /* MockObjects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockObjects.swift; sourceTree = "<group>"; };
+		02DF2AB02C8DB5680079E047 /* ForTheWinTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ForTheWinTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		02DF2AB22C8DB5680079E047 /* DrawsViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawsViewModelTests.swift; sourceTree = "<group>"; };
+		02DF2AB92C8DBB820079E047 /* Date+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Ext.swift"; sourceTree = "<group>"; };
+		02DF2ABB2C8DCC780079E047 /* NetworkManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManagerTests.swift; sourceTree = "<group>"; };
+		02DF2ABD2C8DCE2C0079E047 /* DrawTicketViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawTicketViewModelTests.swift; sourceTree = "<group>"; };
 		02EEAC262C8C8356006CA058 /* DrawBallView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawBallView.swift; sourceTree = "<group>"; };
 		E454D50A2C88BBC200CA8988 /* ForTheWin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ForTheWin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E454D50D2C88BBC200CA8988 /* ForTheWinApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForTheWinApp.swift; sourceTree = "<group>"; };
@@ -78,6 +97,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		02DF2AAD2C8DB5680079E047 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E454D5072C88BBC200CA8988 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -127,6 +153,7 @@
 			isa = PBXGroup;
 			children = (
 				0267FE1F2C8A075900F6D41B /* Collection+Ext.swift */,
+				02DF2AB92C8DBB820079E047 /* Date+Ext.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -139,6 +166,16 @@
 				025BE6362C8CCFCA00803578 /* DrawTicketView */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		02DF2AB12C8DB5680079E047 /* ForTheWinTests */ = {
+			isa = PBXGroup;
+			children = (
+				02DF2AB22C8DB5680079E047 /* DrawsViewModelTests.swift */,
+				02DF2ABB2C8DCC780079E047 /* NetworkManagerTests.swift */,
+				02DF2ABD2C8DCE2C0079E047 /* DrawTicketViewModelTests.swift */,
+			);
+			path = ForTheWinTests;
 			sourceTree = "<group>";
 		};
 		02EEAC1E2C8C820F006CA058 /* Subviews */ = {
@@ -164,6 +201,7 @@
 			isa = PBXGroup;
 			children = (
 				E454D50C2C88BBC200CA8988 /* ForTheWin */,
+				02DF2AB12C8DB5680079E047 /* ForTheWinTests */,
 				E454D50B2C88BBC200CA8988 /* Products */,
 				0204F7742C8DA51C001F7C85 /* Frameworks */,
 			);
@@ -173,6 +211,7 @@
 			isa = PBXGroup;
 			children = (
 				E454D50A2C88BBC200CA8988 /* ForTheWin.app */,
+				02DF2AB02C8DB5680079E047 /* ForTheWinTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -251,6 +290,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		02DF2AAF2C8DB5680079E047 /* ForTheWinTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 02DF2AB62C8DB5680079E047 /* Build configuration list for PBXNativeTarget "ForTheWinTests" */;
+			buildPhases = (
+				02DF2AAC2C8DB5680079E047 /* Sources */,
+				02DF2AAD2C8DB5680079E047 /* Frameworks */,
+				02DF2AAE2C8DB5680079E047 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				02DF2AB52C8DB5680079E047 /* PBXTargetDependency */,
+			);
+			name = ForTheWinTests;
+			productName = ForTheWinTests;
+			productReference = 02DF2AB02C8DB5680079E047 /* ForTheWinTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		E454D5092C88BBC200CA8988 /* ForTheWin */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = E454D5182C88BBC400CA8988 /* Build configuration list for PBXNativeTarget "ForTheWin" */;
@@ -282,6 +339,10 @@
 				LastSwiftUpdateCheck = 1540;
 				LastUpgradeCheck = 1540;
 				TargetAttributes = {
+					02DF2AAF2C8DB5680079E047 = {
+						CreatedOnToolsVersion = 15.4;
+						TestTargetID = E454D5092C88BBC200CA8988;
+					};
 					E454D5092C88BBC200CA8988 = {
 						CreatedOnToolsVersion = 15.4;
 					};
@@ -304,11 +365,19 @@
 			projectRoot = "";
 			targets = (
 				E454D5092C88BBC200CA8988 /* ForTheWin */,
+				02DF2AAF2C8DB5680079E047 /* ForTheWinTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		02DF2AAE2C8DB5680079E047 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E454D5082C88BBC200CA8988 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -322,6 +391,16 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		02DF2AAC2C8DB5680079E047 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				02DF2ABC2C8DCC780079E047 /* NetworkManagerTests.swift in Sources */,
+				02DF2AB32C8DB5680079E047 /* DrawsViewModelTests.swift in Sources */,
+				02DF2ABE2C8DCE2C0079E047 /* DrawTicketViewModelTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E454D5062C88BBC200CA8988 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -343,6 +422,7 @@
 				E454D5242C88C75D00CA8988 /* NetworkManager.swift in Sources */,
 				E454D50E2C88BBC200CA8988 /* ForTheWinApp.swift in Sources */,
 				E454D5272C88D43700CA8988 /* Constants.swift in Sources */,
+				02DF2ABA2C8DBB820079E047 /* Date+Ext.swift in Sources */,
 				0267FE252C8B3A5A00F6D41B /* DawsView+VM.swift in Sources */,
 				02EEAC272C8C8356006CA058 /* DrawBallView.swift in Sources */,
 				0267FE1B2C89EDC400F6D41B /* DatabaseManager.swift in Sources */,
@@ -352,7 +432,59 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		02DF2AB52C8DB5680079E047 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E454D5092C88BBC200CA8988 /* ForTheWin */;
+			targetProxy = 02DF2AB42C8DB5680079E047 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		02DF2AB72C8DB5680079E047 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.quinnium.ForTheWinTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ForTheWin.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ForTheWin";
+			};
+			name = Debug;
+		};
+		02DF2AB82C8DB5680079E047 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.quinnium.ForTheWinTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ForTheWin.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ForTheWin";
+			};
+			name = Release;
+		};
 		E454D5162C88BBC400CA8988 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -486,7 +618,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -519,7 +651,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -541,6 +673,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		02DF2AB62C8DB5680079E047 /* Build configuration list for PBXNativeTarget "ForTheWinTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				02DF2AB72C8DB5680079E047 /* Debug */,
+				02DF2AB82C8DB5680079E047 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		E454D5052C88BBC200CA8988 /* Build configuration list for PBXProject "ForTheWin" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

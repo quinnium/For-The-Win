@@ -7,7 +7,11 @@
 
 import Foundation
 
-class ModelDataSource {
+protocol ModelDataSourceProtocol {
+    func fetchDraws() async throws -> [Draw]
+}
+
+    class ModelDataSource: ModelDataSourceProtocol {
     
     private let networkManager: NetworkManager
     private let databaseManager: DatabaseManager

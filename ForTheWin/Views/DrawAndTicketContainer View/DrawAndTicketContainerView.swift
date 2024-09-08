@@ -49,7 +49,7 @@ struct DrawAndTicketContainerView: View {
         }
         // Separate Draw Ticket View
         .overlay(alignment: .bottom) {
-            DrawTicketView(viewModel: .init(draw: viewModel.selectedDraw))
+            DrawTicketView(viewModel: .init(draw: viewModel.selectedDraw, ticket: DrawTicket()))
         }
         .ignoresSafeArea()
     }

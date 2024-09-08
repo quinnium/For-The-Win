@@ -66,5 +66,5 @@ struct DrawTicketView: View {
 }
 
 #Preview {
-    DrawTicketView(viewModel: .init(draw: MockObjects.draw))
+    DrawTicketView(viewModel: .init(draw: MockObjects.draw, ticket: DrawTicket()))
 }

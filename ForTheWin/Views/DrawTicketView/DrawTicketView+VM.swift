@@ -11,7 +11,7 @@ extension DrawTicketView {
     final class ViewModel: ObservableObject {
         
         private let draw: Draw
-        private let ticket = DrawTicket()
+        private let ticket: DrawTicket
         var ticketNumbers: [Int] {
             ticket.numbers.sorted()
         }
@@ -33,8 +33,9 @@ extension DrawTicketView {
             }
         }
         
-        init(draw: Draw) {
+        init(draw: Draw, ticket: DrawTicket) {
             self.draw = draw
+            self.ticket = ticket
         }
         
         func isWinningNumber(_ number: Int) -> Bool {

@@ -14,16 +14,8 @@ class DatabaseManager {
     private var realm: Realm
     
     init() {
-        var configuration: Realm.Configuration
-        configuration = Realm.Configuration.defaultConfiguration
-        if configuration.fileURL != nil {
-            configuration.fileURL!.deleteLastPathComponent()
-            configuration.fileURL!.append(path: "FTW")
-            configuration.fileURL!.appendPathExtension("realm")
-            configuration.deleteRealmIfMigrationNeeded = true
-        }
         do {
-            realm = try Realm(configuration: configuration)
+            realm = try Realm()
         } catch {
             fatalError("failed to load Realm with configuration \(error)")
         }
