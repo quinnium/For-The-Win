@@ -12,38 +12,28 @@ struct DrawsView: View {
     @ObservedObject var viewModel: ViewModel
     
     var body: some View {
-        List {
-            ForEach(viewModel.allDraws, id: \.id) { draw in
-                VStack {
-                    HStack {
-                        Text(draw.drawDate.formatted(date: .long, time: .omitted))
-                        Spacer()
-                        Text(draw.gameName)
-                            .font(.caption)
-                            .foregroundStyle(.gray)
-                    }
-                    HStack {
-                        Text("Jackpot: £\(draw.topPrize)")
-                            .font(.caption)
-                            .foregroundStyle(.gray)
-                        Spacer()
-                    }
-                }
-                .onTapGesture {
-                    withAnimation {
-                        viewModel.selectedDraw = draw
+        VStack(alignment: .leading) {
+                Text("Draws")
+                    .font(.system(size: 34, weight: .bold))
+                    .padding()
+                ScrollView {
+                    ForEach(viewModel.allDraws, id: \.id) { draw in
+                        DrawSummaryView(draw: draw)
+                            .padding(.horizontal)
+                            .padding(.vertical, 5)
+                            .onTapGesture {
+                                withAnimation {
+                                    viewModel.selectedDraw = draw
+                                }
+                            }
                     }
                 }
             }
-        }
         .blur(radius: viewModel.selectedDraw == nil ? 0 : 3)
-        
+        // Blurred overlay for when draw selected
         .overlay {
             if viewModel.selectedDraw != nil {
-                DrawDetailContainerView(viewModel: .init(draws: viewModel.allDraws,
-                                                         selectedDraw: viewModel.selectedDraw!,
-                                                         dismissTapped: { viewModel.selectedDraw = nil }))
-    
+                DrawDetailContainerView(viewModel: .init(draws: viewModel.allDraws, selectedDraw: viewModel.selectedDraw!, dismissTapped: { viewModel.selectedDraw = nil }))
                 .transition(.opacity)
             }
         }
@@ -60,6 +50,5 @@ struct DrawsView: View {
     let databaseManager = DatabaseManager()
     let modelDataSource = ModelDataSource(networkManager: networkManager, databaseManager: databaseManager)
     let viewModel = DrawsView.ViewModel(modelDataSource: modelDataSource)
-    
     return DrawsView(viewModel: viewModel)
 }

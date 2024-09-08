@@ -10,18 +10,16 @@ import SwiftUI
 struct DrawDetailContainerView: View {
     
     @StateObject var viewModel: ViewModel
-    @State var ticketVisible = false
     
     var body: some View {
         ZStack {
-            // Background shading
+            // Full screen background shading
             Rectangle()
-                .ignoresSafeArea()
                 .foregroundStyle(.black).opacity(0.4)
                 .onTapGesture {
                     viewModel.dismissTapped()
                 }
-            // Tabview showing Draws
+            // Tabview with swipeable Draws
             ZStack {
                 Color(uiColor: .systemBackground)
                 Color.green.opacity(0.5)
@@ -47,17 +45,13 @@ struct DrawDetailContainerView: View {
                     .offset(x: -10, y: 10)
             }
             .padding(.horizontal)
-
+            .offset(y: -100)
         }
+        // Separate Draw Ticket View
         .overlay(alignment: .bottom) {
             DrawTicketView(viewModel: .init(draw: viewModel.selectedDraw))
-                .offset(y: ticketVisible ? 0 : 400)
-                .animation(.easeInOut(duration: 0.5), value: ticketVisible)
         }
         .ignoresSafeArea()
-        .onAppear {
-            ticketVisible = true
-        }
     }
 }
 

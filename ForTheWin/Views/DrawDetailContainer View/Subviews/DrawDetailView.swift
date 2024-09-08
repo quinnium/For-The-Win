@@ -17,7 +17,7 @@ struct DrawDetailView: View {
             Text(draw.gameName)
                 .font(.largeTitle)
                 .bold()
-                .foregroundStyle(.green).brightness(-0.3)
+                .foregroundStyle(.red)
             Text("Draw date: \(draw.drawDate.formatted(date: .long, time: .omitted))")
                 .bold()
             

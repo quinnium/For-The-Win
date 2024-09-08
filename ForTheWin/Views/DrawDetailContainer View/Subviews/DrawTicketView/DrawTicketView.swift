@@ -10,48 +10,54 @@ import SwiftUI
 struct DrawTicketView: View {
     
     @ObservedObject var viewModel: ViewModel
+    @State var offset: CGFloat = 400
 
     var body: some View {
-        ZStack(alignment: .top) {
-            Color(uiColor: .systemBackground)
-            Color.pink.opacity(0.3)
-            VStack(spacing: 40) {
-                HStack {
-                    Text("My Ticket")
-                        .font(.title)
-                        .bold()
-                        .offset(x: 15, y: 10)
-                    Spacer()
-                }
-                HStack(spacing: 25) {
-                    ForEach(viewModel.ticket.numbers.sorted(), id: \.self) { number in
-                        let winningNumber = viewModel.draw.numbers.contains(number)
-                        Text(String(number))
-                            .foregroundStyle(winningNumber ? Color.green : Color.gray)
-                            .brightness(winningNumber ? -0.2 : -0.1)
-                            .bold(winningNumber ? true : false)
+            ZStack {
+                Color(uiColor: .systemBackground)
+                Color.pink.opacity(0.3)
+                VStack(spacing: 20) {
+                    HStack {
+                        Text("My Ticket")
                             .font(.title)
-                            .overlay {
-                                if winningNumber {
-                                    Circle()
-                                        .stroke(Color.green, lineWidth: 5)
-                                        .foregroundStyle(Color.clear)
-                                        .frame(width: 50, height: 50)
-                                }
-                            }
+                            .bold()
+                            .offset(y: -20)
+                        Spacer()
                     }
-                    .frame(width: 40)
+                    HStack(spacing: 25) {
+                        ForEach(viewModel.ticket.numbers.sorted(), id: \.self) { number in
+                            let winningNumber = viewModel.draw.numbers.contains(number)
+                            Text(String(number))
+                                .foregroundStyle(winningNumber ? Color.green : Color.primary)
+                                .brightness(winningNumber ? -0.2 : -0.1)
+                                .bold(winningNumber ? true : false)
+                                .font(.title2)
+                                .overlay {
+                                    if winningNumber {
+                                        Circle()
+                                            .stroke(Color.green, lineWidth: 5)
+                                            .foregroundStyle(Color.clear)
+                                            .frame(width: 45, height: 45)
+                                    }
+                                }
+                        }
+                        .frame(width: 40)
+                    }
+                    Text(viewModel.winningStatusString)
+                        .multilineTextAlignment(.center)
+                        .font(.body)
+                        .frame(height: 50)
                 }
-                Text(viewModel.winningStatusString)
-                    .multilineTextAlignment(.center)
-                    .font(.title2)
-                    .padding(.horizontal)
+                .padding(.horizontal)
             }
-
-        }
-        .clipShape(UnevenRoundedRectangle(cornerRadii: .init(topLeading: 30, bottomLeading: 0, bottomTrailing: 0, topTrailing: 30)))
+        .clipShape(UnevenRoundedRectangle(cornerRadii: .init(topLeading: 20, bottomLeading: 0, bottomTrailing: 0, topTrailing: 20)))
         .frame(maxHeight: 250)
         .padding(.horizontal)
+        .offset(y: offset)
+        .animation(.easeOut(duration: 1), value: offset)
+        .onAppear {
+            offset = 0
+        }
     }
 }
 
