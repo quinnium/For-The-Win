@@ -8,7 +8,6 @@
 import Foundation
 
 struct DrawTicket {
-    
     var numbers: Set<Int> = []
     
     init() {

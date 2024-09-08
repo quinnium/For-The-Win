@@ -8,7 +8,6 @@
 import Foundation
 
 struct DrawDTO: Decodable {
-    
     let gameId: Int?
     let gameName: String?
     let id: String?

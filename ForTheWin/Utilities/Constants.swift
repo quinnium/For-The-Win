@@ -8,7 +8,6 @@
 import Foundation
 
 enum URLStrings {
-    
     static let mockDataApi = "https://run.mocky.io/v3/cf5698d7-db82-407d-b7cd-e39a3833b4fe"
 }
 

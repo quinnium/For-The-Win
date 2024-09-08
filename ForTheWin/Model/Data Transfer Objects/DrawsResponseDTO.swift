@@ -8,6 +8,5 @@
 import Foundation
 
 struct DrawsResponseDTO: Decodable {
-    
     let draws: [DrawDTO]
 }

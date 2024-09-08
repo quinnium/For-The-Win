@@ -8,7 +8,6 @@
 import Foundation
 
 struct MockObjects {
-    
     static let draw = Draw(gameID: 1,
                            gameName: "Lotto",
                            id: "Game-1",
@@ -16,7 +15,6 @@ struct MockObjects {
                            numbers: [34, 12, 9, 45, 2],
                            bonusBalls: [12, 4],
                            topPrize: 23000000)
-    
     // For unit tests to test ordering
     static var unorderedDraws: [Draw] {
         let gameIDArray     = [2, 2, 1, 1, 2]

@@ -9,7 +9,6 @@ import Foundation
 import RealmSwift
 
 class Draw: Object {
-    
     @Persisted var gameID: Int
     @Persisted var gameName: String
     @Persisted var id: String
@@ -28,14 +27,12 @@ class Draw: Object {
                 let topPrize = dto.topPrize else {
             return nil
         }
-                
         let dtoNumbers = [dto.number1,
                           dto.number2,
                           dto.number3,
                           dto.number4,
                           dto.number5,
                           dto.number6]
-        
         self.init()
         self.gameID = gameID
         self.gameName = gameName
@@ -68,7 +65,6 @@ class Draw: Object {
         self.bonusBalls = List<Int>()
         self.bonusBalls.append(objectsIn: bonusBalls)
         self.topPrize = topPrize
-        
     }
 }
 
