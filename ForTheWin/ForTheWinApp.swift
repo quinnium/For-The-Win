@@ -20,7 +20,6 @@ struct ForTheWinApp: App {
         _viewModel = StateObject(wrappedValue: viewModel)
     }
     
-    
     var body: some Scene {
         WindowGroup {
             DrawsView(viewModel: viewModel)

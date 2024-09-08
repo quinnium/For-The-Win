@@ -27,7 +27,6 @@ struct DrawBallView: View {
                    )
                    .frame(width: 40, height: 40)
                    .shadow(color: .gray.opacity(0.5), radius: 10, x: 0, y: 0)
-
                // Number
                Text(String(number))
                    .foregroundColor(.black)

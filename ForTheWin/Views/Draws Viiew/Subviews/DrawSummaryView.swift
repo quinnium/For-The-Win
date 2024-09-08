@@ -31,6 +31,10 @@ struct DrawSummaryView: View {
             Color.green.opacity(0.5)
             .clipShape(RoundedRectangle(cornerRadius: 10))
         }
+        .accessibilityElement()
+        .accessibilityLabel(draw.drawDate.formatted(date: .complete, time: .omitted) + draw.gameName)
+        .accessibilityAddTraits(.isButton)
+        
     }
 }
 

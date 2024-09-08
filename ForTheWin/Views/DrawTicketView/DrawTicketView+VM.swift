@@ -8,13 +8,12 @@
 import Foundation
 
 extension DrawTicketView {
-    class ViewModel: ObservableObject {
+    final class ViewModel: ObservableObject {
         
-        let draw: Draw
-        let ticket = DrawTicket()
-        
-        init(draw: Draw) {
-            self.draw = draw
+        private let draw: Draw
+        private let ticket = DrawTicket()
+        var ticketNumbers: [Int] {
+            ticket.numbers.sorted()
         }
         
         var winningStatusString: String {
@@ -32,6 +31,14 @@ extension DrawTicketView {
                 default:
                     return "You've matched \(winningNumberCount) out of \(ticket.numbers.count) numbers"
             }
+        }
+        
+        init(draw: Draw) {
+            self.draw = draw
+        }
+        
+        func isWinningNumber(_ number: Int) -> Bool {
+            draw.numbers.contains(number)
         }
     }
 }

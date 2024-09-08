@@ -7,14 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		025BE62D2C8C930D00803578 /* DrawDetailContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025BE62C2C8C930D00803578 /* DrawDetailContainerView.swift */; };
-		025BE6312C8CB76300803578 /* DrawDetailContainerView+VM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025BE6302C8CB76300803578 /* DrawDetailContainerView+VM.swift */; };
+		025BE62D2C8C930D00803578 /* DrawAndTicketContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025BE62C2C8C930D00803578 /* DrawAndTicketContainerView.swift */; };
+		025BE6312C8CB76300803578 /* DrawAndTicketContainerView+VM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025BE6302C8CB76300803578 /* DrawAndTicketContainerView+VM.swift */; };
 		025BE6332C8CC34B00803578 /* DrawTicket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025BE6322C8CC34B00803578 /* DrawTicket.swift */; };
 		025BE6352C8CC44100803578 /* DrawTicketView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025BE6342C8CC44100803578 /* DrawTicketView.swift */; };
 		025BE6382C8CCFDF00803578 /* DrawTicketView+VM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025BE6372C8CCFDF00803578 /* DrawTicketView+VM.swift */; };
 		025BE63B2C8D88BE00803578 /* DrawSummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025BE63A2C8D88BE00803578 /* DrawSummaryView.swift */; };
 		0267FE112C89CFFD00F6D41B /* Draw.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0267FE102C89CFFD00F6D41B /* Draw.swift */; };
-		0267FE192C89E42B00F6D41B /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 0267FE182C89E42B00F6D41B /* RealmSwift */; };
 		0267FE1B2C89EDC400F6D41B /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0267FE1A2C89EDC400F6D41B /* DatabaseManager.swift */; };
 		0267FE1D2C8A049200F6D41B /* ModelDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0267FE1C2C8A049200F6D41B /* ModelDataSource.swift */; };
 		0267FE202C8A075900F6D41B /* Collection+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0267FE1F2C8A075900F6D41B /* Collection+Ext.swift */; };
@@ -22,6 +21,8 @@
 		0267FE252C8B3A5A00F6D41B /* DawsView+VM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0267FE242C8B3A5A00F6D41B /* DawsView+VM.swift */; };
 		02CE57492C8C85A300F87EDF /* DrawDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02CE57482C8C85A300F87EDF /* DrawDetailView.swift */; };
 		02CE574D2C8C871800F87EDF /* MockObjects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02CE574C2C8C871800F87EDF /* MockObjects.swift */; };
+		02DF2AAA2C8DA81C0079E047 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 02DF2AA92C8DA81C0079E047 /* RealmSwift */; };
+		02DF2AAB2C8DA8990079E047 /* RealmSwift in Embed Frameworks */ = {isa = PBXBuildFile; productRef = 02DF2AA92C8DA81C0079E047 /* RealmSwift */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		02EEAC272C8C8356006CA058 /* DrawBallView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02EEAC262C8C8356006CA058 /* DrawBallView.swift */; };
 		E454D50E2C88BBC200CA8988 /* ForTheWinApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E454D50D2C88BBC200CA8988 /* ForTheWinApp.swift */; };
 		E454D5122C88BBC400CA8988 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E454D5112C88BBC400CA8988 /* Assets.xcassets */; };
@@ -34,9 +35,23 @@
 		E454D52C2C88E86F00CA8988 /* FTWError.swift in Sources */ = {isa = PBXBuildFile; fileRef = E454D52B2C88E86F00CA8988 /* FTWError.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		0204F7782C8DA51C001F7C85 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 12;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				02DF2AAB2C8DA8990079E047 /* RealmSwift in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
-		025BE62C2C8C930D00803578 /* DrawDetailContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawDetailContainerView.swift; sourceTree = "<group>"; };
-		025BE6302C8CB76300803578 /* DrawDetailContainerView+VM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DrawDetailContainerView+VM.swift"; sourceTree = "<group>"; };
+		025BE62C2C8C930D00803578 /* DrawAndTicketContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawAndTicketContainerView.swift; sourceTree = "<group>"; };
+		025BE6302C8CB76300803578 /* DrawAndTicketContainerView+VM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DrawAndTicketContainerView+VM.swift"; sourceTree = "<group>"; };
 		025BE6322C8CC34B00803578 /* DrawTicket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawTicket.swift; sourceTree = "<group>"; };
 		025BE6342C8CC44100803578 /* DrawTicketView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawTicketView.swift; sourceTree = "<group>"; };
 		025BE6372C8CCFDF00803578 /* DrawTicketView+VM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DrawTicketView+VM.swift"; sourceTree = "<group>"; };
@@ -67,21 +82,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0267FE192C89E42B00F6D41B /* RealmSwift in Frameworks */,
+				02DF2AAA2C8DA81C0079E047 /* RealmSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		025BE62B2C8C92EE00803578 /* DrawDetailContainer View */ = {
+		0204F7742C8DA51C001F7C85 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				025BE62C2C8C930D00803578 /* DrawDetailContainerView.swift */,
-				025BE6302C8CB76300803578 /* DrawDetailContainerView+VM.swift */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		025BE62B2C8C92EE00803578 /* DrawAndTicketContainer View */ = {
+			isa = PBXGroup;
+			children = (
+				025BE62C2C8C930D00803578 /* DrawAndTicketContainerView.swift */,
+				025BE6302C8CB76300803578 /* DrawAndTicketContainerView+VM.swift */,
 				02EEAC1E2C8C820F006CA058 /* Subviews */,
 			);
-			path = "DrawDetailContainer View";
+			path = "DrawAndTicketContainer View";
 			sourceTree = "<group>";
 		};
 		025BE6362C8CCFCA00803578 /* DrawTicketView */ = {
@@ -113,7 +135,8 @@
 			isa = PBXGroup;
 			children = (
 				02EEAC1F2C8C821D006CA058 /* Draws Viiew */,
-				025BE62B2C8C92EE00803578 /* DrawDetailContainer View */,
+				025BE62B2C8C92EE00803578 /* DrawAndTicketContainer View */,
+				025BE6362C8CCFCA00803578 /* DrawTicketView */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -123,7 +146,6 @@
 			children = (
 				02CE57482C8C85A300F87EDF /* DrawDetailView.swift */,
 				02EEAC262C8C8356006CA058 /* DrawBallView.swift */,
-				025BE6362C8CCFCA00803578 /* DrawTicketView */,
 			);
 			path = Subviews;
 			sourceTree = "<group>";
@@ -143,6 +165,7 @@
 			children = (
 				E454D50C2C88BBC200CA8988 /* ForTheWin */,
 				E454D50B2C88BBC200CA8988 /* Products */,
+				0204F7742C8DA51C001F7C85 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -235,6 +258,7 @@
 				E454D5062C88BBC200CA8988 /* Sources */,
 				E454D5072C88BBC200CA8988 /* Frameworks */,
 				E454D5082C88BBC200CA8988 /* Resources */,
+				0204F7782C8DA51C001F7C85 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -242,7 +266,7 @@
 			);
 			name = ForTheWin;
 			packageProductDependencies = (
-				0267FE182C89E42B00F6D41B /* RealmSwift */,
+				02DF2AA92C8DA81C0079E047 /* RealmSwift */,
 			);
 			productName = ForTheWin;
 			productReference = E454D50A2C88BBC200CA8988 /* ForTheWin.app */;
@@ -273,7 +297,7 @@
 			);
 			mainGroup = E454D5012C88BBC200CA8988;
 			packageReferences = (
-				0267FE152C89E42B00F6D41B /* XCRemoteSwiftPackageReference "realm-swift" */,
+				02DF2AA82C8DA81C0079E047 /* XCRemoteSwiftPackageReference "realm-swift" */,
 			);
 			productRefGroup = E454D50B2C88BBC200CA8988 /* Products */;
 			projectDirPath = "";
@@ -302,7 +326,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				025BE6312C8CB76300803578 /* DrawDetailContainerView+VM.swift in Sources */,
+				025BE6312C8CB76300803578 /* DrawAndTicketContainerView+VM.swift in Sources */,
 				0267FE1D2C8A049200F6D41B /* ModelDataSource.swift in Sources */,
 				025BE6352C8CC44100803578 /* DrawTicketView.swift in Sources */,
 				02CE574D2C8C871800F87EDF /* MockObjects.swift in Sources */,
@@ -313,7 +337,7 @@
 				E454D52C2C88E86F00CA8988 /* FTWError.swift in Sources */,
 				025BE6332C8CC34B00803578 /* DrawTicket.swift in Sources */,
 				E454D5202C88C30E00CA8988 /* DrawDTO.swift in Sources */,
-				025BE62D2C8C930D00803578 /* DrawDetailContainerView.swift in Sources */,
+				025BE62D2C8C930D00803578 /* DrawAndTicketContainerView.swift in Sources */,
 				0267FE112C89CFFD00F6D41B /* Draw.swift in Sources */,
 				025BE63B2C8D88BE00803578 /* DrawSummaryView.swift in Sources */,
 				E454D5242C88C75D00CA8988 /* NetworkManager.swift in Sources */,
@@ -456,6 +480,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ForTheWin/Preview Content\"";
+				DEVELOPMENT_TEAM = GX3C3AN8F9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -488,6 +513,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ForTheWin/Preview Content\"";
+				DEVELOPMENT_TEAM = GX3C3AN8F9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -536,7 +562,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		0267FE152C89E42B00F6D41B /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+		02DF2AA82C8DA81C0079E047 /* XCRemoteSwiftPackageReference "realm-swift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/realm/realm-swift";
 			requirement = {
@@ -547,9 +573,9 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		0267FE182C89E42B00F6D41B /* RealmSwift */ = {
+		02DF2AA92C8DA81C0079E047 /* RealmSwift */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 0267FE152C89E42B00F6D41B /* XCRemoteSwiftPackageReference "realm-swift" */;
+			package = 02DF2AA82C8DA81C0079E047 /* XCRemoteSwiftPackageReference "realm-swift" */;
 			productName = RealmSwift;
 		};
 /* End XCSwiftPackageProductDependency section */

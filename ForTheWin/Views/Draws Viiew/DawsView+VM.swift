@@ -8,10 +8,9 @@
 import Foundation
 
 extension DrawsView {
-    class ViewModel: ObservableObject {
+    final class ViewModel: ObservableObject {
         
         private var modelDataSource: ModelDataSource
-        
         @Published var allDraws: [Draw] = []
         @Published var selectedDraw: Draw? = nil
         

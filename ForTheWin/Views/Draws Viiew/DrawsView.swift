@@ -13,28 +13,29 @@ struct DrawsView: View {
     
     var body: some View {
         VStack(alignment: .leading) {
-                Text("Draws")
-                    .font(.system(size: 34, weight: .bold))
-                    .padding()
-                ScrollView {
-                    ForEach(viewModel.allDraws, id: \.id) { draw in
-                        DrawSummaryView(draw: draw)
-                            .padding(.horizontal)
-                            .padding(.vertical, 5)
-                            .onTapGesture {
-                                withAnimation {
-                                    viewModel.selectedDraw = draw
-                                }
+            Text("Draws")
+                .font(.system(size: 34, weight: .bold))
+                .padding()
+            ScrollView {
+                ForEach(viewModel.allDraws, id: \.id) { draw in
+                    DrawSummaryView(draw: draw)
+                        .padding(.horizontal)
+                        .padding(.vertical, 5)
+                        .onTapGesture {
+                            withAnimation {
+                                viewModel.selectedDraw = draw
                             }
-                    }
+                        }
+
                 }
             }
+        }
         .blur(radius: viewModel.selectedDraw == nil ? 0 : 3)
-        // Blurred overlay for when draw selected
+        // Blurred overlay (when draw selected)
         .overlay {
             if viewModel.selectedDraw != nil {
-                DrawDetailContainerView(viewModel: .init(draws: viewModel.allDraws, selectedDraw: viewModel.selectedDraw!, dismissTapped: { viewModel.selectedDraw = nil }))
-                .transition(.opacity)
+                DrawAndTicketContainerView(viewModel: .init(draws: viewModel.allDraws, selectedDraw: viewModel.selectedDraw!, dismissTapped: { viewModel.selectedDraw = nil }))
+                    .transition(.opacity)
             }
         }
         .onAppear {

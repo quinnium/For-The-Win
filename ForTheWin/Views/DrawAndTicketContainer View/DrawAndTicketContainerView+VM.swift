@@ -1,5 +1,5 @@
 //
-//  DrawDetailContainerView+VM.swift
+//  DrawAndTicketContainerView+VM.swift
 //  ForTheWin
 //
 //  Created by Quinn on 07/09/2024.
@@ -7,8 +7,8 @@
 
 import Foundation
 
-extension DrawDetailContainerView {
-    class ViewModel: ObservableObject {
+extension DrawAndTicketContainerView {
+    final class ViewModel: ObservableObject {
         
         let draws: [Draw]
         @Published var selectedDraw: Draw

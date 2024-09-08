@@ -1,5 +1,5 @@
 //
-//  DrawDetailContainerView.swift
+//  DrawAndTicketContainerView.swift
 //  ForTheWin
 //
 //  Created by Quinn on 07/09/2024.
@@ -7,9 +7,9 @@
 
 import SwiftUI
 
-struct DrawDetailContainerView: View {
+struct DrawAndTicketContainerView: View {
     
-    @StateObject var viewModel: ViewModel
+    @ObservedObject var viewModel: ViewModel
     
     var body: some View {
         ZStack {
@@ -58,5 +58,5 @@ struct DrawDetailContainerView: View {
 #Preview {
     @State var draw: Draw = MockObjects.draw
 
-    return DrawDetailContainerView(viewModel: .init(draws: [draw], selectedDraw: draw, dismissTapped: {}))
+    return DrawAndTicketContainerView(viewModel: .init(draws: [draw], selectedDraw: draw, dismissTapped: {}))
 }
